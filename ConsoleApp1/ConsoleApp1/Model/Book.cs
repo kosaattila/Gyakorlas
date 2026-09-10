@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,9 +33,19 @@ namespace ConsoleApp1.Model
             PageCount = pageCount;
         }
 
+        public Book(string title , string author) : this(title,author,0)
+        {
+
+        }
+
         public override string GetDescription()
         {
             return $"Title: {Title} - Author: {Author} - {PageCount}";
+        }
+
+        public bool IsLong()
+        {
+            return PageCount > 300;
         }
     }
 }
