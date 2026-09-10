@@ -10,9 +10,9 @@ namespace ConsoleApp1.Model
     {
         public int IssueNumber { get; set; }
         
-        public Magazine(string title) : base(title)
+        public Magazine(string title, int Issuenum) : base(title)
         {
-
+            IssueNumber = Issuenum;
         }
 
         public override string GetDescription()
